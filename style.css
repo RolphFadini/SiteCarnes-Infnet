@@ -1,0 +1,144 @@
+:root {
+    --red: #da292a;
+    --darkerRed: #881c1c;
+    --black: #10101e;
+    --gray: rgba(84, 89, 95, 0.1);
+    --white: #f5f6f7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    min-width: 800px;
+}
+
+section:first-child {
+    height: 112vh;
+    position: relative;
+    background: url(imgs/background.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+section:first-child:after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    border-left: 50vw solid var(--white);
+    border-right: 50vw solid var(--white);
+    border-top: 70px solid transparent;
+}
+
+#welcome {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    min-width: 600px;
+}
+
+#welcome > #nome-site {
+    color: var(--red);
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+#welcome > #welcome-txt {
+    font-size: 50px;
+    color: var(--white);
+    font-weight: lighter;
+}
+
+#delivery-btn {
+    background-color: var(--red);
+    color: var(--white);
+    width: 525px;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 5px 0 20px 5px;
+    border-width: 0;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    border-color: var(--red);
+    transition: background-color .3s ease;
+}
+
+#delivery-btn:hover {
+    background-color: var(--darkerRed);
+    border-color: var(--red);
+    cursor: pointer;
+}
+
+section:nth-child(2) {
+    background-color: var(--gray);
+    height: 100vh;
+}
+
+#icons-container {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    margin: 20px;
+}
+
+.icons-box > img {
+    width: 70px;
+    margin: 10px 0 10px 0;
+}
+
+.icons-box > p {
+    font-weight: bold;
+}
+
+.icons-box > #click-here {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+section:nth-child(3) {
+    background-color: var(--white);
+}
+
+#noble-cuts {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    height: 100%;
+    align-items: center;
+}
+
+.imgs-container {
+    width: 350px;
+    height: 350px;
+    text-align: center;
+}
+
+.imgs-container p {
+    margin-top: 20px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.imgs-container img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
