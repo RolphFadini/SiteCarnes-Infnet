@@ -1,161 +1,177 @@
 :root {
-    --red: #da292a;
-    --darkerRed: #881c1c;
-    --black: #10101e;
-    --gray: rgba(84, 89, 95, 0.1);
-    --white: #f5f6f7;
+  --red: #da292a;
+  --darkerRed: #881c1c;
+  --black: #10101e;
+  --gray: rgba(84, 89, 95, 0.1);
+  --white: #f5f6f7;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 /* padrão de tamanhos para as sections */
 section {
-    height: 100vh;
-    min-width: 800px;
+  height: 100vh;
+  min-width: 800px;
 }
 
 /* estilização individual de cada section */
 section:first-child {
-    position: relative;
-    background: url(imgs/background.jpg);
-    background-size: cover;
-    overflow: hidden;
+  position: relative;
+  background: url(imgs/background.jpg);
+  background-size: cover;
+  overflow: hidden;
 }
 
 section:first-child:after {
-    content: '';
-    position: absolute;
-    bottom: 0; 
-    left: 0;
-    border-left: 50vw solid var(--white);
-    border-right: 50vw solid var(--white);
-    border-top: 80px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-left: 50vw solid var(--white);
+  border-right: 50vw solid var(--white);
+  border-top: 80px solid transparent;
 }
 
 section:nth-child(2) {
-    background-color: var(--gray);
+  background-color: var(--gray);
+  height: 150vh;
+}
+
+section:nth-child(3) {
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  flex-flow: column;
 }
 
 /* section 1 */
 #welcome {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    min-width: 600px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  min-width: 600px;
 }
 
 #welcome > #nome-site {
-    color: var(--red);
-    font-size: 24px;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
+  color: var(--red);
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
 }
 
 #welcome > #welcome-txt {
-    font-size: 50px;
-    color: var(--white);
-    font-weight: lighter;
+  font-size: 50px;
+  color: var(--white);
+  font-weight: lighter;
 }
 
 #delivery-btn {
-    background-color: var(--red);
-    color: var(--white);
-    width: 525px;
-    height: 60px;
-    margin-top: 30px;
-    border-radius: 5px 0 20px 5px;
-    border-width: 0;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 0.3px;
-    border-color: var(--red);
-    transition: background-color .3s ease;
+  background-color: var(--red);
+  color: var(--white);
+  width: 525px;
+  height: 60px;
+  margin-top: 30px;
+  border-radius: 5px 0 20px 5px;
+  border-width: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  border-color: var(--red);
+  transition: background-color 0.3s ease;
 }
 
 #delivery-btn:hover {
-    background-color: var(--darkerRed);
-    border-color: var(--red);
-    cursor: pointer;
+  background-color: var(--darkerRed);
+  border-color: var(--red);
+  cursor: pointer;
 }
 
 /* section 2 */
 /* icons entrega rapida, localização etc */
 #icons-container {
-    background-color: var(--white);
-    display: flex;
-    justify-content: space-evenly;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .icons-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 120px;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  margin: 20px;
 }
 
 .icons-box > img {
-    width: 70px;
-    margin: 10px 0 10px 0;
+  width: 70px;
+  margin: 10px 0 10px 0;
 }
 
 .icons-box > p {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .icons-box > #click-here {
-    font-size: 15px;
-    font-weight: lighter;
+  font-size: 15px;
+  font-weight: lighter;
 }
 
 /* área dos cortes nobre */
 #section2-container {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 #section2-text {
-    text-align: center;
-    font-size: 40px;
+  text-align: center;
+  font-size: 40px;
 }
 
 #section2-subtext {
-    text-align: center;
-    font-size: 20px;
-    margin-top: 10px;
-    color: var(--red)
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--red);
 }
 
 /* cards com a foto de os nomes dos cortes */
-#noble-cuts {
-    display: flex;
-    gap: 15px;
-    height: 450px;
-    align-items: center;
-    margin-top: 70px;
+#traditional-cuts,
+#exotic-cuts {
+  display: flex;
+  gap: 15px;
+  height: 450px;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .imgs-container {
-    width: 650px;
-    height: 350px;
-    text-align: center;
+  width: 650px;
+  height: 350px;
+  text-align: center;
 }
 
 .imgs-container p {
-    margin-top: 20px;
-    color: var(--black);
-    font-weight: bold;
-    font-size: 20px;
+  margin-top: 20px;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .imgs-container img {
-    width: 100%;
-    max-width: 350px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#exotic-container {
+  margin-top: 60px;
 }
