@@ -42,6 +42,16 @@ section:nth-child(2) {
   height: 150vh;
 }
 
+section:nth-child(3) {
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  flex-flow: column;
+}
+
 /* section 1 */
 #welcome {
   position: absolute;
