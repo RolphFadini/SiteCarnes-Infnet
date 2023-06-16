@@ -1,0 +1,111 @@
+:root {
+  --red: #da292a;
+  --darkerRed: #881c1c;
+  --black: #10101e;
+  --gray: rgba(84, 89, 95, 0.1);
+  --white: #f5f6f7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.form-control.dropdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#dropdown-label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.dropdown {
+  min-width: 15em;
+  position: relative;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  background-color: #f0f0f0;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px var(--gray) solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.select-clicked {
+  border: 2px var(--red) solid;
+  box-shadow: 0 0 0.8em var(--gray);
+}
+
+.select:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--red);
+  transition: 0.3s;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background-color: var(--white);
+  border: 1px var(--gray) solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: var(--black);
+  position: absolute;
+  top: 3.4em;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.active {
+  background: var(--darkerRed);
+  color: var(--white);
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
