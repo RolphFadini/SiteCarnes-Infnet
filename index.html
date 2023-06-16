@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delícias da carne Exóticas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <link rel="stylesheet" href="radio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="script.js"></script>
+    
     
 </head>
 <body>
@@ -19,11 +25,11 @@
                 Carnes de Qualidade,<br>
                 entregues na sua porta!
             </h2>
-
+            
             <button id="delivery-btn">Delivery | Peça Já!</button>
         </div>
     </section>
-
+    
     <section>
         <div id="icons-container">
             <div class="icons-box">
@@ -69,11 +75,11 @@
                     <p>Frutos do Mar</p>
                 </div>
             </div>
-
+            
             <div id="exotic-container">
                 <h2 id="section2-text">Cortes Exóticos</h2>
                 <p id="section2-subtext">Buscando ampliar seu paladar?</p>
-
+                
                 <div id="exotic-cuts">
                     <div class="imgs-container">
                         <img src="" alt="">
@@ -95,9 +101,107 @@
             </div>
         </div>
     </section>
-
+    
     <section id="form-section">
+        
+        <h1 id="form-section-title">Crie uma conta para agendar sua entrega!</h1>
+        
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Criar Conta</h2>
+            </div>
+            <form class="form" id="form">
+                <div class="form-control success">
+                    <label for="username">Nome</label>
+                    <input type="text" placeholder="João" id="username">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Nome não pode estar em branco e deve possuir pelo menos 2 nomes</small>
+                </div>
+                
+                <div class="form-control error">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="João@email.com" id="email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>E-mail deve ser válido</small>
+                </div>
+                
+                <div class="form-control">
+                    <label for="number">Telefone</label>
+                    <input type="text" placeholder="00000-0000" id="number">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Telefone deve tirar os símbolos e espaços em branco</small>
+                </div>
+                
+                <div class="form-control">
+                    <span id="radio-label">Escolha sua preferência de carne</span>
+                    <div class="radio-container">
+                        <div class="radio-area">
+                            <div class="radio"></div>
+                            <span class="radio-option">Tradicionais</span>
+                        </div>
+                        <div class="radio-area">
+                            <div class="radio"></div>
+                            <span class="radio-option">Exóticas</span>
+                        </div>
+                        <div class="radio-area">
+                            <div class="radio"></div>
+                            <span class="radio-option">Ambas</span>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="form-control">
+                    <span id="dropdown-label">Escolha seu tipo de carne favorita</span>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Bovina</span>
+                            <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                            <li>Suína</li>
+                            <li>Aves</li>
+                            <li>Frutos do mar</li>
+                            <li class="active">Bovina</li>
+                            <li>Outras</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <span id="checkbox-label">Como deseja ser contatado?</span>
+                    <div class="checkbox-container">
+                        <div class="checkbox-area">
+                            <div class="checkbox"></div>
+                            <span class="checkbox-option">Todos os meios</span>
+                        </div>
+                        <div class="checkbox-area">
+                            <div class="checkbox"></div>
+                            <span class="checkbox-option">Email</span>
+                        </div>
+                        <div class="checkbox-area">
+                            <div class="checkbox"></div>
+                            <span class="checkbox-option">SMS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-control">
+                    <label for="mesage">Comentário</label>
+                    <input type="textarea" placeholder="Eu gostaria que o Delícias da carnes exóticas..." id="mesage">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Mensagem com pelo menos 5 caracteres</small>
+                </div>
+
+                <button>Enviar</button>
+            </form>
+        </div>
     </section>
+    <script src="dropdown.js"></script>
+    <script src="checkbox.js"></script>
+    <script src="radio.js"></script>
 </body>
 </html>
