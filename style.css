@@ -1,3 +1,18 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    text-decoration: underline;
+  }
+  to {
+    text-decoration: none;
+  }
+}
+
 :root {
   --red: #da292a;
   --darkerRed: #881c1c;
@@ -43,7 +58,7 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-  height: 100vh;
+  height: 110vh;
   background-color: var(--white);
   display: flex;
   align-items: center;
@@ -122,6 +137,14 @@ section:nth-child(3) {
 .icons-box > #click-here {
   font-size: 15px;
   font-weight: lighter;
+  color: var(--red);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
 }
 
 /* área dos cortes nobre */

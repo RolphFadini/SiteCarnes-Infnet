@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="dropdown.css">
     <link rel="stylesheet" href="checkbox.css">
     <link rel="stylesheet" href="radio.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="script.js"></script>
-    
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> 
 </head>
 <body>
     <section>
@@ -33,20 +30,20 @@
     <section>
         <div id="icons-container">
             <div class="icons-box">
-                <img src="imgs/entrega-rapida.png" alt="">
+                <img src="imgs/entrega-rapida.png" alt="icone de entregador">
                 <p>Entrega rápida</p>
             </div>
             <div class="icons-box">
-                <img src="imgs/localizacao.png" alt="">
+                <img src="imgs/localizacao.png" alt="icone de localização">
                 <p>Localização</p>
-                <p id="click-here">Clique Aqui!</p>
             </div>
             <div class="icons-box">
-                <img src="imgs/calendario.png" alt="">
+                <img src="imgs/calendario.png" alt="icone de calendário">
                 <p>Agendamentos</p>
+                <a href="#form-section" id="click-here">Clique Aqui!</a>
             </div>
             <div class="icons-box">
-                <img src="imgs/qualidade.png" alt="">
+                <img src="imgs/qualidade.png" alt="icone de qualidade">
                 <p>Qualidade</p>
             </div>
         </div>
@@ -82,19 +79,19 @@
                 
                 <div id="exotic-cuts">
                     <div class="imgs-container">
-                        <img src="" alt="">
+                        <img src="imgs/cortes-jacare.jpg" alt="tábua com carne de jacaré">
                         <p>Jacaré</p>
                     </div>
                     <div class="imgs-container">
-                        <img src="" alt="">
+                        <img src="imgs/cortes-javali.jpg" alt="tábua com carne de javali">
                         <p>Javali</p>
                     </div>
                     <div class="imgs-container">
-                        <img src="" alt="">
+                        <img src="imgs/cortes-avestruz.jpg" alt="tábua com carne de avestruz">
                         <p>Avestruz</p>
                     </div>
                     <div class="imgs-container">
-                        <img src="" alt="">
+                        <img src="imgs/cortes-ra.jpg" alt="tábua com pernas de rã">
                         <p>Rã</p>
                     </div>
                 </div>
@@ -102,8 +99,7 @@
         </div>
     </section>
     
-    <section id="form-section">
-        
+    <section id="form-section">  
         <h1 id="form-section-title">Crie uma conta para agendar sua entrega!</h1>
         
         <div class="form-container">
@@ -111,35 +107,35 @@
                 <h2>Criar Conta</h2>
             </div>
             <form class="form" id="form">
-                <div class="form-control success">
+                <div class="form-control">
                     <label for="username">Nome</label>
                     <input type="text" placeholder="João" id="username">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>Nome não pode estar em branco e deve possuir pelo menos 2 nomes</small>
+                    <small>Errror message</small>
                 </div>
                 
-                <div class="form-control error">
+                <div class="form-control">
                     <label for="email">Email</label>
-                    <input type="email" placeholder="João@email.com" id="email">
+                    <input type="text" placeholder="João@email.com" id="email">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>E-mail deve ser válido</small>
+                    <small>Error message</small>
                 </div>
                 
                 <div class="form-control">
                     <label for="number">Telefone</label>
-                    <input type="text" placeholder="00000-0000" id="number">
+                    <input type="text" placeholder="00 00000-0000" id="number" maxlength="11">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>Telefone deve tirar os símbolos e espaços em branco</small>
+                    <small>Error message</small>
                 </div>
                 
                 <div class="form-control">
                     <span id="radio-label">Escolha sua preferência de carne</span>
                     <div class="radio-container">
                         <div class="radio-area">
-                            <div class="radio"></div>
+                            <div class="radio marcado"></div>
                             <span class="radio-option">Tradicionais</span>
                         </div>
                         <div class="radio-area">
@@ -186,20 +182,23 @@
                             <span class="checkbox-option">SMS</span>
                         </div>
                     </div>
+                    <small>Error message</small>
                 </div>
                 
                 <div class="form-control">
-                    <label for="mesage">Comentário</label>
-                    <input type="textarea" placeholder="Eu gostaria que o Delícias da carnes exóticas..." id="mesage">
+                    <label for="message">Deixe um comentário</label>
+                    <input type="textarea" placeholder="Eu gostaria que o Delícias da carnes exóticas..." id="message">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
-                    <small>Mensagem com pelo menos 5 caracteres</small>
+                    <small>Error message</small>
                 </div>
 
-                <button>Enviar</button>
+                <button id="enviar">Enviar</button>
             </form>
         </div>
     </section>
+
+    <script src="validation.js"></script>
     <script src="dropdown.js"></script>
     <script src="checkbox.js"></script>
     <script src="radio.js"></script>
